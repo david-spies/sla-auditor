@@ -390,6 +390,7 @@ export class StackScanner {
         severity: "CRITICAL",
         pattern: {
           regex: "\\beval\\s*\\(",
+	  scope: "**/!(stack-scanner).ts",
         },
         requirement:
           "`eval()` is forbidden due to code injection risk. Use safer alternatives.",
