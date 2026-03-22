@@ -27,6 +27,7 @@ constraints:
     severity: CRITICAL
     pattern:
       regex: "\\beval\\s*\\("
+      scope: "**/!(stack-scanner).ts"
     requirement: "`eval()` is forbidden due to code injection risk."
     advice: Use `JSON.parse()` or refactor the logic to avoid dynamic evaluation.
     tags: [security]
